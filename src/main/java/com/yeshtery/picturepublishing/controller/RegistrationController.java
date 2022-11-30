@@ -21,7 +21,6 @@ public class RegistrationController {
     @PostMapping("registration")
     public Map<String, String> post(@RequestBody @Valid User user) {
 
-        user.setId(null);
         userService.saveUser(user);
 
         return Map.of("Message", "created");
