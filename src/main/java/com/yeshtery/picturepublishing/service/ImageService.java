@@ -6,7 +6,6 @@ import com.yeshtery.picturepublishing.exception.NotFoundImage;
 import com.yeshtery.picturepublishing.exception.files.NotFoundFileStatus;
 import com.yeshtery.picturepublishing.model.Image;
 import com.yeshtery.picturepublishing.repository.ImageRepository;
-import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -49,7 +48,7 @@ public class ImageService {
         return imageRepository.saveAll(Arrays.stream(image).toList());
     }
 
-    // @Secured("ADMIN")
+    // Authority: ADMIN
     public Image setStatus(Long id, FileStatus status) {
         Image image = imageRepository.findById(id)
                 .orElseThrow(NotFoundImage::new);
@@ -73,9 +72,7 @@ public class ImageService {
             default -> throw new NotFoundFileStatus();
         }
 
-        imageRepository.save(image);
-
-        return image;
+        return imageRepository.save(image);
 
     }
 

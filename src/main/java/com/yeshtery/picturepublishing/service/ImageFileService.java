@@ -91,7 +91,7 @@ public class ImageFileService implements FileService {
     private static Resource findByPath(Path path) {
         try {
             Resource resource = new UrlResource(path.toUri());
-            // if (resource.exists() || resource.isReadable())
+
             if (resource.exists() || resource.isReadable()) {
                 return resource;
             }
