@@ -38,7 +38,7 @@ public class SecurityConfiguration {
         // Admin Access
         httpSecurity
                 .authorizeRequests()
-                .mvcMatchers("/admin/**", "/files/unprocessed/*")
+                .mvcMatchers("/admin/image/**", "/files/unprocessed/*")
                 .hasRole(Authority.ADMIN.name());
         httpSecurity.authorizeRequests().anyRequest().authenticated();
 
@@ -48,6 +48,7 @@ public class SecurityConfiguration {
                 .csrf().csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse())
                 .and()
                 .userDetailsService(userDetailsServers);
+        // httpSecurity.csrf().disable();
         return httpSecurity.build();
     }
 

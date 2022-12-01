@@ -1,5 +1,6 @@
 package com.yeshtery.picturepublishing.controller;
 
+import com.yeshtery.picturepublishing.dto.FileStatusDto;
 import com.yeshtery.picturepublishing.dto.ImageAdminDto;
 import com.yeshtery.picturepublishing.enums.FileStatus;
 import com.yeshtery.picturepublishing.mapper.ImageAdminDtoMapper;
@@ -33,8 +34,7 @@ public class ImageAdminController {
 
 
     @PatchMapping("admin/image/{id}/status")
-    public Image changeStatus(@PathVariable Long id, @RequestBody FileStatus status) {
-        // TODO: test
-        return imageService.setStatus(id, status);
+    public Image changeStatus(@PathVariable Long id, @RequestBody FileStatusDto status) {
+        return imageService.setStatus(id, status.getStatus());
     }
 }
