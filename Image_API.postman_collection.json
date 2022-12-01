@@ -1,0 +1,1098 @@
+{
+	"info": {
+		"_postman_id": "4cc264cb-ade3-4975-af94-67f7bd5df090",
+		"name": "Image API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18052030"
+	},
+	"item": [
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Image ID - Admin",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/admin/image/UNPROCESSED/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin",
+								"image",
+								"UNPROCESSED",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Image ID - Admin",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/admin/image/UNPROCESSED/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"admin",
+										"image",
+										"UNPROCESSED",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 01 Dec 2022 12:39:26 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 3,\n    \"category\": \"MACHINE\",\n    \"status\": \"UNPROCESSED\",\n    \"description\": \"any\",\n    \"imagePath\": \"/files/UNPROCESSED/3.jpg\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Image - Admin",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/admin/image/UNPROCESSED/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin",
+								"image",
+								"UNPROCESSED",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Image - Admin",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/admin/image/UNPROCESSED/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"admin",
+										"image",
+										"UNPROCESSED",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 01 Dec 2022 12:40:36 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 3,\n        \"category\": \"MACHINE\",\n        \"status\": \"UNPROCESSED\",\n        \"description\": \"any\",\n        \"imagePath\": \"/files/UNPROCESSED/3.jpg\"\n    },\n    {\n        \"id\": 4,\n        \"category\": \"MACHINE\",\n        \"status\": \"UNPROCESSED\",\n        \"description\": \"any\",\n        \"imagePath\": \"/files/UNPROCESSED/4.jpg\"\n    },\n    {\n        \"id\": 5,\n        \"category\": \"MACHINE\",\n        \"status\": \"UNPROCESSED\",\n        \"description\": \"any\",\n        \"imagePath\": \"/files/UNPROCESSED/cab68d2f-7166-4a19-a8b5-7085563b7748.jpg\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Image chagne Stauts - Admin",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\": \"ACCEPT\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/admin/image/3/status",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin",
+								"image",
+								"3",
+								"status"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Image chagne Stauts - Admin",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"status\": \"ACCEPT\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/admin/image/3/status",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"admin",
+										"image",
+										"3",
+										"status"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 01 Dec 2022 13:18:45 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 3,\n    \"category\": \"MACHINE\",\n    \"status\": \"ACCEPT\",\n    \"description\": \"any\",\n    \"fileName\": \"3.jpg\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Image",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "metadata",
+									"value": "{\"category\": \"MACHINE\", \"description\": \"any\"}",
+									"contentType": "application/json",
+									"type": "text"
+								},
+								{
+									"key": "file",
+									"contentType": "",
+									"type": "file",
+									"src": "/C:/Users/Zakaria Shahen/Pictures/01-gettyimages-543183018_resized.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/image",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"image"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Image - User Only",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "metadata",
+											"value": "{\"category\": \"MACHINE\", \"description\": \"any\"}",
+											"contentType": "application/json",
+											"type": "text"
+										},
+										{
+											"key": "file",
+											"contentType": "",
+											"type": "file",
+											"src": "/C:/Users/Zakaria Shahen/Pictures/01-gettyimages-543183018_resized.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/image",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"image"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 01 Dec 2022 12:33:51 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 5,\n    \"category\": \"MACHINE\",\n    \"description\": \"any\",\n    \"imagePath\": \"/files/UNPROCESSED/cab68d2f-7166-4a19-a8b5-7085563b7748.jpg\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "anonymous",
+			"item": [
+				{
+					"name": "Iamge ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/image/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"image",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Iamge ID - Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/image/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"image",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Set-Cookie",
+									"value": "XSRF-TOKEN=; Max-Age=0; Expires=Thu, 01 Jan 1970 00:00:10 GMT; Path=/"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "XSRF-TOKEN=978ecb4e-8cb0-48c4-9112-51122dd7106d; Path=/"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "JSESSIONID=5E74C76E038E426BFADB7EEECAE3955C; Path=/; HttpOnly"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 01 Dec 2022 11:57:37 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"category\": \"MACHINE\",\n    \"description\": \"any 2\",\n    \"imagePath\": \"/files/ACCEPT/2.jpg\"\n}"
+						},
+						{
+							"name": "Iamge ID - Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/image/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"image",
+										"3"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 01 Dec 2022 11:58:09 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"NOT_FOUND\",\n    \"message\": \"Not Found Image\",\n    \"path\": \"/image/3\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Iamge",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/image",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"image"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Iamge",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/image",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"image"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 01 Dec 2022 11:52:02 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"category\": \"MACHINE\",\n        \"description\": \"any\",\n        \"imagePath\": \"/files/ACCEPT/1.jpg\"\n    },\n    {\n        \"id\": 2,\n        \"category\": \"MACHINE\",\n        \"description\": \"any 2\",\n        \"imagePath\": \"/files/ACCEPT/2.jpg\"\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "login",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "login - user",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 01 Dec 2022 11:54:07 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"authorities\": [\n        {\n            \"authority\": \"ROLE_USER\"\n        }\n    ],\n    \"details\": {\n        \"remoteAddress\": \"172.20.0.1\",\n        \"sessionId\": \"C43B76469D0E66536FDDD60685513B43\"\n    },\n    \"authenticated\": true,\n    \"principal\": {\n        \"password\": null,\n        \"username\": \"user\",\n        \"authorities\": [\n            {\n                \"authority\": \"ROLE_USER\"\n            }\n        ],\n        \"accountNonExpired\": true,\n        \"accountNonLocked\": true,\n        \"credentialsNonExpired\": true,\n        \"enabled\": true\n    },\n    \"credentials\": null,\n    \"name\": \"user\"\n}"
+				},
+				{
+					"name": "login - Admin",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 01 Dec 2022 11:54:39 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"authorities\": [\n        {\n            \"authority\": \"ROLE_ADMIN\"\n        }\n    ],\n    \"details\": {\n        \"remoteAddress\": \"172.20.0.1\",\n        \"sessionId\": \"C43B76469D0E66536FDDD60685513B43\"\n    },\n    \"authenticated\": true,\n    \"principal\": {\n        \"password\": null,\n        \"username\": \"admin\",\n        \"authorities\": [\n            {\n                \"authority\": \"ROLE_ADMIN\"\n            }\n        ],\n        \"accountNonExpired\": true,\n        \"accountNonLocked\": true,\n        \"credentialsNonExpired\": true,\n        \"enabled\": true\n    },\n    \"credentials\": null,\n    \"name\": \"admin\"\n}"
+				}
+			]
+		},
+		{
+			"name": "registration",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"user1\",\r\n  \"password\": \"user\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/registration",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"registration"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "registration",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"user1\",\r\n  \"password\": \"user\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/registration",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"registration"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Set-Cookie",
+							"value": "XSRF-TOKEN=e324104f-2514-48a7-ab7c-a548508dc652; Path=/"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 01 Dec 2022 11:56:51 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Message\": \"created\"\n}"
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "admin123",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "admin",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

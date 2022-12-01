@@ -1,0 +1,670 @@
+openapi: 3.0.0
+info:
+  title: Image API
+  version: 1.0.0
+servers:
+  - url: http://localhost:8080
+components:
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+    noauthAuth:
+      type: http
+      scheme: noauth
+security:
+  - basicAuth: []
+tags:
+  - name: Admin
+  - name: User
+  - name: anonymous
+paths:
+  /admin/image/UNPROCESSED/3:
+    get:
+      tags:
+        - Admin
+      summary: Image ID - Admin
+      security:
+        - basicAuth: []
+      responses:
+        '200':
+          description: OK
+          headers:
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            X-XSS-Protection:
+              schema:
+                type: string
+                example: 1; mode=block
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, no-store, max-age=0, must-revalidate
+            Pragma:
+              schema:
+                type: string
+                example: no-cache
+            Expires:
+              schema:
+                type: integer
+                example: '0'
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Transfer-Encoding:
+              schema:
+                type: string
+                example: chunked
+            Date:
+              schema:
+                type: string
+                example: Thu, 01 Dec 2022 12:39:26 GMT
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=60
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                id: 3
+                category: MACHINE
+                status: UNPROCESSED
+                description: any
+                imagePath: /files/UNPROCESSED/3.jpg
+  /admin/image/UNPROCESSED/:
+    get:
+      tags:
+        - Admin
+      summary: Image - Admin
+      security:
+        - basicAuth: []
+      responses:
+        '200':
+          description: OK
+          headers:
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            X-XSS-Protection:
+              schema:
+                type: string
+                example: 1; mode=block
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, no-store, max-age=0, must-revalidate
+            Pragma:
+              schema:
+                type: string
+                example: no-cache
+            Expires:
+              schema:
+                type: integer
+                example: '0'
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Transfer-Encoding:
+              schema:
+                type: string
+                example: chunked
+            Date:
+              schema:
+                type: string
+                example: Thu, 01 Dec 2022 12:40:36 GMT
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=60
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                - id: 3
+                  category: MACHINE
+                  status: UNPROCESSED
+                  description: any
+                  imagePath: /files/UNPROCESSED/3.jpg
+                - id: 4
+                  category: MACHINE
+                  status: UNPROCESSED
+                  description: any
+                  imagePath: /files/UNPROCESSED/4.jpg
+                - id: 5
+                  category: MACHINE
+                  status: UNPROCESSED
+                  description: any
+                  imagePath: /files/UNPROCESSED/cab68d2f-7166-4a19-a8b5-7085563b7748.jpg
+  /admin/image/3/status:
+    patch:
+      tags:
+        - Admin
+      summary: Image chagne Stauts - Admin
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                status: ACCEPT
+      security:
+        - basicAuth: []
+      responses:
+        '200':
+          description: OK
+          headers:
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            X-XSS-Protection:
+              schema:
+                type: string
+                example: 1; mode=block
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, no-store, max-age=0, must-revalidate
+            Pragma:
+              schema:
+                type: string
+                example: no-cache
+            Expires:
+              schema:
+                type: integer
+                example: '0'
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Transfer-Encoding:
+              schema:
+                type: string
+                example: chunked
+            Date:
+              schema:
+                type: string
+                example: Thu, 01 Dec 2022 13:18:45 GMT
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=60
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                id: 3
+                category: MACHINE
+                status: ACCEPT
+                description: any
+                fileName: 3.jpg
+  /image:
+    post:
+      tags:
+        - User
+      summary: Image
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                metadata:
+                  type: string
+                  example: '{"category": "MACHINE", "description": "any"}'
+                file:
+                  type: string
+                  format: binary
+      security:
+        - basicAuth: []
+      responses:
+        '200':
+          description: OK
+          headers:
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            X-XSS-Protection:
+              schema:
+                type: string
+                example: 1; mode=block
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, no-store, max-age=0, must-revalidate
+            Pragma:
+              schema:
+                type: string
+                example: no-cache
+            Expires:
+              schema:
+                type: integer
+                example: '0'
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Transfer-Encoding:
+              schema:
+                type: string
+                example: chunked
+            Date:
+              schema:
+                type: string
+                example: Thu, 01 Dec 2022 12:33:51 GMT
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=60
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                id: 5
+                category: MACHINE
+                description: any
+                imagePath: /files/UNPROCESSED/cab68d2f-7166-4a19-a8b5-7085563b7748.jpg
+    get:
+      tags:
+        - anonymous
+      summary: Iamge
+      security:
+        - noauthAuth: []
+      responses:
+        '200':
+          description: OK
+          headers:
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            X-XSS-Protection:
+              schema:
+                type: string
+                example: 1; mode=block
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, no-store, max-age=0, must-revalidate
+            Pragma:
+              schema:
+                type: string
+                example: no-cache
+            Expires:
+              schema:
+                type: integer
+                example: '0'
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Transfer-Encoding:
+              schema:
+                type: string
+                example: chunked
+            Date:
+              schema:
+                type: string
+                example: Thu, 01 Dec 2022 11:52:02 GMT
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=60
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                - id: 1
+                  category: MACHINE
+                  description: any
+                  imagePath: /files/ACCEPT/1.jpg
+                - id: 2
+                  category: MACHINE
+                  description: any 2
+                  imagePath: /files/ACCEPT/2.jpg
+  /image/1:
+    get:
+      tags:
+        - anonymous
+      summary: Iamge ID
+      responses:
+        '200':
+          description: OK
+          headers:
+            Set-Cookie:
+              schema:
+                type: string
+                example: JSESSIONID=5E74C76E038E426BFADB7EEECAE3955C; Path=/; HttpOnly
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            X-XSS-Protection:
+              schema:
+                type: string
+                example: 1; mode=block
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, no-store, max-age=0, must-revalidate
+            Pragma:
+              schema:
+                type: string
+                example: no-cache
+            Expires:
+              schema:
+                type: integer
+                example: '0'
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Transfer-Encoding:
+              schema:
+                type: string
+                example: chunked
+            Date:
+              schema:
+                type: string
+                example: Thu, 01 Dec 2022 11:57:37 GMT
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=60
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                id: 2
+                category: MACHINE
+                description: any 2
+                imagePath: /files/ACCEPT/2.jpg
+        '404':
+          description: Not Found
+          headers:
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            X-XSS-Protection:
+              schema:
+                type: string
+                example: 1; mode=block
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, no-store, max-age=0, must-revalidate
+            Pragma:
+              schema:
+                type: string
+                example: no-cache
+            Expires:
+              schema:
+                type: integer
+                example: '0'
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Transfer-Encoding:
+              schema:
+                type: string
+                example: chunked
+            Date:
+              schema:
+                type: string
+                example: Thu, 01 Dec 2022 11:58:09 GMT
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=60
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                status: NOT_FOUND
+                message: Not Found Image
+                path: /image/3
+  /login:
+    get:
+      tags:
+        - default
+      summary: login
+      security:
+        - basicAuth: []
+      responses:
+        '200':
+          description: OK
+          headers:
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            X-XSS-Protection:
+              schema:
+                type: string
+                example: 1; mode=block
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, no-store, max-age=0, must-revalidate
+            Pragma:
+              schema:
+                type: string
+                example: no-cache
+            Expires:
+              schema:
+                type: integer
+                example: '0'
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Transfer-Encoding:
+              schema:
+                type: string
+                example: chunked
+            Date:
+              schema:
+                type: string
+                example: Thu, 01 Dec 2022 11:54:07 GMT
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=60
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+          content:
+            application/json:
+              schema:
+                type: object
+              examples:
+                example-0:
+                  summary: login - user
+                  value:
+                    authorities:
+                      - authority: ROLE_USER
+                    details:
+                      remoteAddress: 172.20.0.1
+                      sessionId: C43B76469D0E66536FDDD60685513B43
+                    authenticated: true
+                    principal:
+                      password: null
+                      username: user
+                      authorities:
+                        - authority: ROLE_USER
+                      accountNonExpired: true
+                      accountNonLocked: true
+                      credentialsNonExpired: true
+                      enabled: true
+                    credentials: null
+                    name: user
+                example-1:
+                  summary: login - Admin
+                  value:
+                    authorities:
+                      - authority: ROLE_ADMIN
+                    details:
+                      remoteAddress: 172.20.0.1
+                      sessionId: C43B76469D0E66536FDDD60685513B43
+                    authenticated: true
+                    principal:
+                      password: null
+                      username: admin
+                      authorities:
+                        - authority: ROLE_ADMIN
+                      accountNonExpired: true
+                      accountNonLocked: true
+                      credentialsNonExpired: true
+                      enabled: true
+                    credentials: null
+                    name: admin
+  /registration:
+    post:
+      tags:
+        - default
+      summary: registration
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                email: user1
+                password: user
+      security:
+        - noauthAuth: []
+      responses:
+        '200':
+          description: OK
+          headers:
+            Set-Cookie:
+              schema:
+                type: string
+                example: XSRF-TOKEN=e324104f-2514-48a7-ab7c-a548508dc652; Path=/
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            X-XSS-Protection:
+              schema:
+                type: string
+                example: 1; mode=block
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, no-store, max-age=0, must-revalidate
+            Pragma:
+              schema:
+                type: string
+                example: no-cache
+            Expires:
+              schema:
+                type: integer
+                example: '0'
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Transfer-Encoding:
+              schema:
+                type: string
+                example: chunked
+            Date:
+              schema:
+                type: string
+                example: Thu, 01 Dec 2022 11:56:51 GMT
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=60
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                Message: created
