@@ -3,7 +3,7 @@ package com.yeshtery.picturepublishing;
 import com.yeshtery.picturepublishing.enums.FileStatus;
 import com.yeshtery.picturepublishing.enums.ImageCategory;
 import com.yeshtery.picturepublishing.model.Image;
-import com.yeshtery.picturepublishing.model.User;
+import com.yeshtery.picturepublishing.model.Users;
 import com.yeshtery.picturepublishing.service.ImageService;
 import com.yeshtery.picturepublishing.service.UserService;
 import org.springframework.boot.ApplicationArguments;
@@ -60,14 +60,14 @@ public class DataLoader implements ApplicationRunner {
 
 
         userService.saveAdmin(
-                User.builder()
+                Users.builder()
                         .email("admin")
                         .password(passwordEncoder.encode("admin123"))
                         .build()
         );
 
         userService.saveUser(
-                User.builder()
+                Users.builder()
                         .email("user")
                         .password(passwordEncoder.encode("user"))
                         .build()

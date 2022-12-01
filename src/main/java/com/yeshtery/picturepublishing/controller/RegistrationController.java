@@ -1,6 +1,6 @@
 package com.yeshtery.picturepublishing.controller;
 
-import com.yeshtery.picturepublishing.model.User;
+import com.yeshtery.picturepublishing.model.Users;
 import com.yeshtery.picturepublishing.service.UserService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -19,7 +19,7 @@ public class RegistrationController {
     }
 
     @PostMapping("registration")
-    public Map<String, String> post(@RequestBody @Valid User user) {
+    public Map<String, String> post(@RequestBody @Valid Users user) {
 
         userService.saveUser(user);
 

@@ -1,7 +1,7 @@
 package com.yeshtery.picturepublishing.security;
 
 
-import com.yeshtery.picturepublishing.model.User;
+import com.yeshtery.picturepublishing.model.Users;
 import com.yeshtery.picturepublishing.service.UserService;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -19,7 +19,7 @@ public class JpaUserDetailsServers implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        User user = userService.findByEmail(username)
+        Users user = userService.findByEmail(username)
                 .orElseThrow(() -> new UsernameNotFoundException("Login Failed"));
 
         return org.springframework.security.core.userdetails.User.builder()

@@ -1,7 +1,7 @@
 package com.yeshtery.picturepublishing.service;
 
 import com.yeshtery.picturepublishing.enums.Authority;
-import com.yeshtery.picturepublishing.model.User;
+import com.yeshtery.picturepublishing.model.Users;
 import com.yeshtery.picturepublishing.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
@@ -16,28 +16,28 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
-    public Optional<User> findById(Long id){
+    public Optional<Users> findById(Long id){
         return userRepository.findById(id);
     }
 
 
-    public User saveUser(User user){
+    public Users saveUser(Users user){
         user.setId(null);
         user.setAuthority(Authority.USER);
         return save(user);    }
 
-    public User saveAdmin(User user){
+    public Users saveAdmin(Users user){
         user.setId(null);
         user.setAuthority(Authority.ADMIN);
         return save(user);
     }
 
-    private User save(User user){
+    private Users save(Users user){
         return userRepository.save(user);
     }
 
 
-    public Optional<User> findByEmail(String email) {
+    public Optional<Users> findByEmail(String email) {
         return userRepository.findByEmail(email);
     }
 }
