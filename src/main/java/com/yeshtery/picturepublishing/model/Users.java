@@ -20,6 +20,7 @@ public class Users {
     private Long id;
 
     @NotNull @NotEmpty
+    @Column(unique = true)
     private String email;
 
     @NotNull @NotEmpty

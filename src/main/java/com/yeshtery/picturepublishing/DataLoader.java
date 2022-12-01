@@ -18,12 +18,10 @@ public class DataLoader implements ApplicationRunner {
 
     private final ImageService imageService;
 
-    private final PasswordEncoder passwordEncoder;
 
-    public DataLoader(UserService userService, ImageService imageService, PasswordEncoder passwordEncoder) {
+    public DataLoader(UserService userService, ImageService imageService) {
         this.userService = userService;
         this.imageService = imageService;
-        this.passwordEncoder = passwordEncoder;
     }
 
     @Override
@@ -62,14 +60,14 @@ public class DataLoader implements ApplicationRunner {
         userService.saveAdmin(
                 Users.builder()
                         .email("admin")
-                        .password(passwordEncoder.encode("admin123"))
+                        .password("admin123")
                         .build()
         );
 
         userService.saveUser(
                 Users.builder()
                         .email("user")
-                        .password(passwordEncoder.encode("user"))
+                        .password("user")
                         .build()
         );
 

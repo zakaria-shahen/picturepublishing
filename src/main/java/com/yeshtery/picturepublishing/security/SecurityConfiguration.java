@@ -29,6 +29,12 @@ public class SecurityConfiguration {
                 .and()
                 .csrf(x -> x.ignoringAntMatchers("/registration"));
 
+        // User Access
+        httpSecurity
+                .authorizeRequests()
+                .mvcMatchers(HttpMethod.POST, "/image").hasRole(Authority.USER.name());
+
+
         // Admin Access
         httpSecurity
                 .authorizeRequests()
