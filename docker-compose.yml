@@ -1,0 +1,26 @@
+version: "3.9"
+services:
+
+  app:
+    image: picture_publishing:latest
+    build:
+      context: .
+    container_name: picture_publishing_container
+    depends_on:
+      - datasource
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://datasource:5432/picture_publishing
+      - SPRING_PROFILES_ACTIVE=dev
+    ports:
+      - "8080:8080"
+
+  datasource:
+    image: postgres
+    container_name: picture_publishing_database_container
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: picture_publishing
+    ports:
+      - "5432:5432"
