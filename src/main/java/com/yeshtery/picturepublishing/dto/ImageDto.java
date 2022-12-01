@@ -21,5 +21,5 @@ public class ImageDto {
     @NotNull @NotEmpty
     private String description;
 
-    private String path;
+    private String imagePath;
 }

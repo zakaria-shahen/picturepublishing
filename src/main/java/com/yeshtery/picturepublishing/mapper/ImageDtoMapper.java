@@ -20,7 +20,7 @@ public class ImageDtoMapper {
                 .id(image.getId())
                 .category(image.getCategory())
                 .description(image.getDescription())
-                .path("/files/" + image.getStatus().name() + "/" + image.getFileName())
+                .imagePath("/files/" + image.getStatus().name() + "/" + image.getFileName())
                 .build();
 
     }
